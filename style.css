@@ -1,0 +1,124 @@
+/* ===== 基本設定と変数 ===== */
+:root {
+    /* 色（ここを編集するだけでサイト全体の配色が変わります） */
+    --primary-color: #3498db;  /* アクセントカラー */
+    --text-color: #333;       /* 基本の文字色 */
+    --bg-color: #f8f9fa;      /* 背景色を少しグレーに */
+    --container-bg: #fff;     /* コンテンツ背景色 */
+    --shadow-color: rgba(0, 0, 0, 0.08);
+
+    /* フォント */
+    --body-font: 'Noto Sans JP', sans-serif;
+}
+
+/* ===== リセットと共通スタイル ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body-font); background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+a { text-decoration: none; color: var(--primary-color); }
+ul { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: 968px; margin-left: auto; margin-right: auto; padding: 0 1.5rem; }
+.section { padding: 5rem 0 2rem; }
+.section__title { font-size: 2rem; margin-bottom: 3rem; color: var(--text-color); text-align: center;}
+.sp-br { display: none; } /* スマホ用の改行 */
+
+/* ===== ヘッダー ===== */
+.header { width: 100%; position: fixed; top: 0; left: 0; z-index: 100; background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 2px 4px var(--shadow-color); }
+.nav { height: 4.5rem; display: flex; justify-content: space-between; align-items: center; }
+.nav__logo { font-weight: 700; color: var(--text-color); }
+.nav__list { display: flex; gap: 2rem; }
+.nav__link { color: var(--text-color); transition: color .3s; }
+.nav__link:hover { color: var(--primary-color); }
+
+/* ===== HERO ===== */
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero__title { font-size: 3.5rem; margin-bottom: 0.5rem; }
+.hero__subtitle { font-size: 1.5rem; color: #666; margin-bottom: 2rem; }
+
+/* ===== ABOUT, SKILLS ===== */
+#about, #skills {text-align: center;}
+.skills__container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 2rem 3rem; max-width: 800px; margin: 0 auto; padding: 2rem 0; }
+.skill__item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #555; transition: color .3s, transform .3s; }
+.skill__item:hover { color: var(--primary-color); transform: translateY(-5px); }
+.skill__item i { font-size: 3rem; }
+
+/* ===== EXPERIENCE ===== */
+.experience__container { position: relative; padding: 2rem 0; }
+.experience__container::before { content: ''; position: absolute; top: 0; left: 50%; width: 2px; height: 100%; background-color: #ddd; transform: translateX(-50%); }
+.experience__item { position: relative; width: calc(50% - 2.5rem); margin-bottom: 3rem; cursor: pointer; }
+.experience__item:nth-child(odd) { left: 0; }
+.experience__item:nth-child(even) { left: calc(50% + 2.5rem); }
+.experience__item::after { content: ''; position: absolute; top: 0.5rem; width: 12px; height: 12px; background-color: white; border: 2px solid var(--primary-color); border-radius: 50%; z-index: 1; }
+.experience__item:nth-child(odd)::after { right: -3.1rem; }
+.experience__item:nth-child(even)::after { left: -3.1rem; }
+.experience__content { background-color: var(--container-bg); padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 15px var(--shadow-color); transition: transform 0.3s, box-shadow 0.3s; border-top: 4px solid; }
+.experience__item:hover .experience__content { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.experience__item[data-color="blue"] .experience__content { border-color: #3498db; }
+.experience__item[data-color="cyan"] .experience__content { border-color: #1abc9c; }
+.experience__item[data-color="orange"] .experience__content { border-color: #e67e22; }
+.experience__item[data-color="red"] .experience__content { border-color: #e74c3c; }
+.experience__item[data-color="purple"] .experience__content { border-color: #8e44ad; }
+.experience__year { font-size: 0.9rem; color: #777; margin-bottom: 0.25rem; display: block; }
+.experience__title { font-size: 1.1rem; font-weight: 700; }
+
+/* ===== CONTACT ===== */
+#contact { text-align: center; }
+.contact__button { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background-color: var(--primary-color); color: #fff; padding: 1rem 2rem; border-radius: 5px; font-weight: 700; margin-top: 1rem; transition: background-color .3s; border: none; font-family: var(--body-font);}
+.contact__button:hover { background-color: #2980b9; }
+
+/* ↓↓↓ ここから追加 ↓↓↓ */
+.contact__sub-text {
+    margin-top: 2.5rem;
+    color: #555;
+    line-height: 1.8;
+}
+.slack__button {
+    background-color: #4A154B; /* Slackのブランドカラー */
+}
+.slack__button:hover {
+    background-color: #3b0f3c;
+}
+.slack__button i {
+    font-size: 1.2rem;
+}
+/* ↑↑↑ ここまで追加 ↑↑↑ */
+
+/* ===== MODAL (ポップアップ) ===== */
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center; z-index: 1001; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; }
+.modal.is-visible { opacity: 1; visibility: visible; }
+.modal__content { position: relative; background-color: #fff; padding: 2rem; border-radius: 8px; max-width: 600px; width: 90%; transform: translateY(20px); transition: transform 0.3s; }
+.modal.is-visible .modal__content { transform: translateY(0); }
+.modal__close { position: absolute; top: 0.75rem; right: 1rem; font-size: 2rem; font-weight: 300; color: #888; background: none; border: none; cursor: pointer; line-height: 1; }
+.modal__title { font-size: 1.5rem; margin-bottom: 1rem; }
+.modal__description { line-height: 1.7; }
+
+/* ===== フッター ===== */
+.footer { background-color: var(--bg-color); text-align: center; padding: 4rem 0 2rem; margin-top: 4rem; }
+.footer__socials { display: flex; justify-content: center; align-items: center; gap: 2rem; margin-bottom: 2rem; }
+.footer__social-link { font-size: 1.8rem; color: #888; transition: color .3s, transform .3s; }
+.footer__social-link:hover { color: var(--primary-color); transform: translateY(-3px); }
+.footer__social-link.text-link { font-size: 1rem; font-weight: 600; letter-spacing: 0.5px; }
+.footer__privacy { max-width: 650px; margin: 0 auto 3rem; font-size: 0.8rem; color: #999; line-height: 1.7; }
+.footer__privacy p { margin-bottom: 1rem; }
+.footer__privacy a { color: #888; text-decoration: underline; }
+.footer__privacy a:hover { color: var(--primary-color); }
+.footer__copy { font-size: 0.85rem; color: #999; }
+
+/* ===== レスポンシブ対応 ===== */
+@media screen and (max-width: 768px) {
+    .nav { height: 4rem; }
+    .hero__title { font-size: 2.5rem; }
+    .hero__subtitle { font-size: 1.2rem; }
+    .section { padding: 4rem 0 1rem; }
+    .section__title { font-size: 1.5rem; }
+    .nav__list { gap: 1rem; }
+
+    .experience__container::before { left: 1rem; transform: translateX(0); }
+    .experience__item, .experience__item:nth-child(even) { width: calc(100% - 3rem); left: 3rem; }
+    .experience__item::after, .experience__item:nth-child(odd)::after, .experience__item:nth-child(even)::after { left: -2.6rem; }
+}
+
+@media screen and (max-width: 480px) {
+    .sp-br { display: block; } /* スマホで改行を有効化 */
+}

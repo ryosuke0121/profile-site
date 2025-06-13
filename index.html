@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryosuke Fujimoto - Portfolio</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-3C64044P7G"
+      src="https://www.googletagmanager.com/gtag/js?id=G-BQ5YRB5R1Q"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,54 +29,289 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-3C64044P7G");
+      gtag("config", "G-BQ5YRB5R1Q");
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ryosuke Fujimoto - Profile</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="favicon.ico" />
   </head>
   <body>
-    <div class="loading-screen">
-      <div class="loader"></div>
-    </div>
-
-    <div class="profile-container">
-      <div class="profile-header">
-        <img src="icon.PNG" alt="プロフィール画像" class="profile-icon" />
-        <h1 class="name">藤本 凌佑</h1>
-        <h4 class="name">Ryosuke Fujimoto</h4>
-      </div>
-
-      <div class="achievements">
-        <h2>実績</h2>
-        <ul>
-          <li>N高グループ生徒会 N/S高新聞実行委員 執筆5期生</li>
-          <li>学生団体Hop One! 情報システム部</li>
+    <header class="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Portfolio</a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="#experience" class="nav__link">Experience</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
         </ul>
-      </div>
+      </nav>
+    </header>
 
-      <div class="social-links">
-        <a href="https://x.com/ryosuke_njr" class="social-link">Twitter</a>
-        <a href="https://github.com/ryosuke0121" class="social-link">GitHub</a>
-        <a href="https://www.wantedly.com/id/ryosuke0121" class="social-link"
-          >Wantedly</a
-        >
+    <main>
+      <section class="hero">
+        <div class="hero__container container" data-aos="fade-up">
+          <h1 class="hero__title">Ryosuke Fujimoto</h1>
+          <p class="hero__subtitle">N High School</p>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container" data-aos="fade-up">
+          <h2 class="section__title">About Me</h2>
+          <p class="section__text">
+            幼少期より、委員会活動や学校行事に積極的に関わることや、パソコンに触れることに楽しさを見出す。不登校を経験するも、N中等部で新聞実行委員と出会い、活動の面白さを再認識。これが自信を取り戻す大きな転機となる。<br />
+            中等部3年の秋（2024年11月）、学内活動に留まらず、学外での活動に手を出し始め「学生団体HopOne!」の情報システム部に所属。この経験を通して、IT分野で活動したいという思いを明確にする。<br />
+            その後、RINCSにジョインし、2025年1月よりホームページ制作や社内システムの管理を担当。<br />
+            N高等学校への進学後も新聞実行委員の活動を続けながら、RINCSではチームを支えるITスキルを実践的に磨いている。
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <h2 class="section__title" data-aos="fade-up">Skills</h2>
+          <div
+            class="skills__container"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="skill__item"><i class="bx bxl-html5"></i> HTML</div>
+            <div class="skill__item"><i class="bx bxl-css3"></i> CSS</div>
+            <div class="skill__item">
+              <i class="bx bxl-javascript"></i> JavaScript
+            </div>
+            <div class="skill__item">
+              <i class="bx bxl-wordpress"></i> WordPress
+            </div>
+            <div class="skill__item"><i class="bx bxl-github"></i> GitHub</div>
+            <div class="skill__item"><i class="bx bxl-slack"></i> Slack</div>
+            <div class="skill__item">
+              <i class="bx bxl-google"></i> Google Apps Script
+            </div>
+            <div class="skill__item">
+              <i class="bx bxl-google"></i> Google Analytics
+            </div>
+            <div class="skill__item">
+              <i class="bx bxl-google"></i> Google Slides
+            </div>
+            <div class="skill__item"><i class="bx bxl-google"></i> G.Docs</div>
+            <div class="skill__item">
+              <i class="bx bxl-google"></i> Google Spreadsheets
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <h2 class="section__title" data-aos="fade-up">Experience</h2>
+          <div
+            class="experience__container"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="experience__item"
+              data-color="blue"
+              data-modal-target="#exp-modal-1"
+            >
+              <div class="experience__content">
+                <span class="experience__year">2023/01 - 2025/03</span>
+                <h3 class="experience__title">
+                  学校法人角川ドワンゴ学園 N中等部
+                </h3>
+              </div>
+            </div>
+
+            <div
+              class="experience__item"
+              data-color="cyan"
+              data-modal-target="#exp-modal-2"
+            >
+              <div class="experience__content">
+                <span class="experience__year">2024/07 -</span>
+                <h3 class="experience__title">
+                  N高グループ生徒会 新聞実行委員
+                </h3>
+              </div>
+            </div>
+
+            <div
+              class="experience__item"
+              data-color="orange"
+              data-modal-target="#exp-modal-3"
+            >
+              <div class="experience__content">
+                <span class="experience__year">2024/11 - 2025/02</span>
+                <h3 class="experience__title">学生団体 Hop One!</h3>
+              </div>
+            </div>
+
+            <div
+              class="experience__item"
+              data-color="red"
+              data-modal-target="#exp-modal-4"
+            >
+              <div class="experience__content">
+                <span class="experience__year">2025/01 -</span>
+                <h3 class="experience__title">RINCS</h3>
+              </div>
+            </div>
+
+            <div
+              class="experience__item"
+              data-color="purple"
+              data-modal-target="#exp-modal-5"
+            >
+              <div class="experience__content">
+                <span class="experience__year">2025/04 -</span>
+                <h3 class="experience__title">
+                  学校法人角川ドワンゴ学園 N高等学校
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container" data-aos="fade-up">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__text">
+            ご連絡は以下のメールアドレスまでお願いいたします。
+          </p>
+          <a href="mailto:contact@ryo0121.com" class="contact__button"
+            >contact@ryo0121.com</a
+          >
+
+          <p class="contact__sub-text">
+            N高等学校・S高等学校・R高等学校に在籍の方は<br
+              class="sp-br"
+            />学園Slackにてご連絡ください
+          </p>
+          <a
+            href="https://n-highschool.slack.com/team/U08E3G7AUCR"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact__button slack__button"
+          >
+            <i class="bx bxl-slack"></i> 学園Slackで連絡する
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__privacy">
+          <p>
+            当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。
+          </p>
+          <p>
+            この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は<a
+              href="https://marketingplatform.google.com/about/analytics/terms/jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Googleアナリティクスサービス利用規約のページ</a
+            >や<a
+              href="https://policies.google.com/technologies/ads"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Googleポリシーと規約ページ</a
+            >をご覧ください。
+          </p>
+        </div>
+
+        <div class="footer__socials">
+          <a
+            href="https://www.instagram.com/ryosuke_2010/"
+            target="_blank"
+            class="footer__social-link"
+            aria-label="Instagram"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a
+            href="https://x.com/ryosuke_njr"
+            target="_blank"
+            class="footer__social-link"
+            aria-label="X"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+          <a
+            href="https://n-highschool.slack.com/archives/C086QDX4UMQ"
+            target="_blank"
+            class="footer__social-link"
+            aria-label="X"
+            ><i class="bx bxl-slack"></i
+          ></a>
+        </div>
+
+        <p class="footer__copy">
+          &copy; 2025 Ryosuke Fujimoto. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <div class="modal" id="exp-modal-1">
+      <div class="modal__content">
+        <button class="modal__close">&times;</button>
+        <h3 class="modal__title">N中等部</h3>
+        <p class="modal__description">
+          N中等部では、他人とのコミュニュケーションはもちろん、キャンパスフェスティバルの実行委員長なども行いました。
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="exp-modal-2">
+      <div class="modal__content">
+        <button class="modal__close">&times;</button>
+        <h3 class="modal__title">N高グループ生徒会 新聞実行委員</h3>
+        <p class="modal__description">
+          新聞実行委員では、記事の執筆や、N高グループ新聞のサイト管理を行なっています。<br />
+          <a href="https://nshigh-news.jp">N高グループ新聞</a>
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="exp-modal-3">
+      <div class="modal__content">
+        <button class="modal__close">&times;</button>
+        <h3 class="modal__title">学生団体 Hop One!</h3>
+        <p class="modal__description">
+          学園内から学園外へ活動を探しxていたときに元々入っていたHop
+          One!への参加を決めました。
+          情報システム部に所属し、HPの作成・運用、メーリングリストの管理、Cloud
+          IdentityでのOAuth設定やアカウント発行、サーバー管理などを行なっています。
+          2025年2月からは部長に就任しましたが、団体の休止により活動休止中です。
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="exp-modal-4">
+      <div class="modal__content">
+        <button class="modal__close">&times;</button>
+        <h3 class="modal__title">RINCS</h3>
+        <p class="modal__description">
+          RINCSは映像・ドローン・グラフィックなどのクリエイティブを通して、わくわくする体験を届けているチームです。
+          広報担当としてHP制作や社内システムの一部管理を行なっています。<br />
+          <a href="https://rincs.site">RINCS ホームページ</a>
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="exp-modal-5">
+      <div class="modal__content">
+        <button class="modal__close">&times;</button>
+        <h3 class="modal__title">N高等学校</h3>
+        <p class="modal__description">
+          2025年4月から週3日キャンパスに通学しています。
+        </p>
       </div>
     </div>
 
-    <div class="contact-section">
-      <a href="contact.html" class="contact-link">Contact</a>
-    </div>
-
-    <script>
-      window.addEventListener("load", () => {
-        setTimeout(() => {
-          document.querySelector(".loading-screen").classList.add("hidden");
-          document.querySelector(".profile-container").classList.add("visible");
-        }, 1500);
-      });
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
